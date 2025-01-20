@@ -1,0 +1,89 @@
+/* src/components/Navbar.css */
+.navbar {
+  background-color: rgba(71, 111, 144, 0.85); /* Dark blue with transparency */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer; /* Add pointer on hover */
+  
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply consistent styling to all links and clickable items */
+.navbar-links li {
+  font-size: 1rem;
+  font-weight: bold; /* Make font bold */
+  color: #fff; /* Ensure white color */
+  cursor: pointer; /* Pointer on hover */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar-links li:hover {
+  text-decoration: underline;
+  color: #b0d4f1; /* Light blue on hover */
+}
+
+/* Style for actual anchor links */
+.navbar-links a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none;
+  font-weight: inherit; /* Inherit font-weight from parent */
+}
+
+/* Language Toggle Styling */
+.language-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #b0d4f1;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-slider {
+  height: 24px;
+  width: 28px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #476f90;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.toggle-slider.english {
+  transform: translateX(0);
+}
+
+.toggle-slider.amharic {
+  transform: translateX(30px);
+}
+

@@ -1,0 +1,90 @@
+.approach {
+  background: #111;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 800px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.approach.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.approach h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Grid layout: 2 rows × 3 columns */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+/* Each tile */
+.approach-tile {
+  background: #111;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Header initially centered */
+.tile-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fdbb2d;
+  font-weight: bold;
+  font-size: 1rem;
+  position: absolute; /* Position it within the tile */
+  top: 50%; /* Vertically centered */
+  left: 50%; /* Horizontally centered */
+  transform: translate(-50%, -50%) translateY(20px); /* Add slide-in effect */
+  z-index: 2; /* Ensure it stays above the image */
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
+}
+
+/* Hide hover content initially */
+.tile-hover-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Slide title and hover content on hover */
+.approach-tile:hover .tile-header {
+  top: 1rem; /* Slide the title to the top */
+  left: 1rem; /* Slight offset for aesthetics */
+  transform: translate(0, 0); /* Remove centering adjustments */
+}
+
+/* Hover state: Reduce how far it moves up */
+.approach-tile:hover .tile-hover-content {
+  opacity: 1;
+  transform: translateY(30px); /* Final state when hovered */
+}
+
+/* Description and image styling */
+.tile-description {
+  color: #ccc;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.tile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}

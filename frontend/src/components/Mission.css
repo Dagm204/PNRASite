@@ -1,0 +1,28 @@
+/* src/components/Mission.css */
+.mission {
+    background: #111;
+    margin: 1rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .mission.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .mission h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .mission p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
