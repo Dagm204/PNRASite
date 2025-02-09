@@ -50,7 +50,11 @@ function Navbar() {
         <li onClick={() => scrollToSection("mission")}>{navText.mission}</li>
         <li onClick={() => scrollToSection("approach")}>{navText.approach}</li>
         <li>
-          <a href="https://forms.gle/AAuDcCMY5bfE3xiE9" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://forms.gle/AAuDcCMY5bfE3xiE9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {navText.fillForm}
           </a>
         </li>

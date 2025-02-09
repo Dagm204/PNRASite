@@ -1,53 +1,36 @@
-/* src/components/Hero.css */
-
 .hero {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 100vh;         /* Occupy full viewport height */
-  background-color: #000; 
-  overflow: hidden;      /* Ensures no scrollbar from the wedge */
+  height: 100vh; /* Occupy full viewport height */
+  background-color: #000;
+  overflow: hidden; /* Ensures no scrollbar from the wedge */
+  padding: 1rem; /* Add padding for smaller screens */
 }
 
-/* 
-  Large wedge container:
-    - width: 80vw (fills much of the screen width)
-    - aspect-ratio: 1 / 1 (makes it a square behind the scenes)
-    - clip-path draws the bottom-right quarter-circle
-    - background-size: contain => entire image is visible
-*/
+/* Hero image */
 .hero-image {
-  width: 80vw;
-  aspect-ratio: 1 / 1; 
-  max-width: 7%;  /* So it doesn't get too huge on very large screens */
-  
-  /* Use a background so we can scale the entire image inside the wedge */
+  width: 80vw; /* Adjust to viewport width */
+  aspect-ratio: 1 / 1;
+  max-width: 600px; /* Prevent it from being too large */
+  height: auto; /* Maintain aspect ratio */
+
   background: url("../img/img1.jpg") center center no-repeat;
   background-size: contain;
 
-  /*
-    A path-based clip for the bottom-right quarter of a circle
-    — arc from (100% 50%) to (50% 100%) with the circle center at (50% 50%)
-    M 50% 50% : Move to center
-    L 100% 50% : Line to right-middle
-    A 50% 50% 0 0 1 50% 100% : Arc to bottom-middle
-    Z : Close shape, returning to center
-  */
   clip-path: path("M 50% 50% L 100% 50% A 50% 50% 0 0 1 50% 100% Z");
 
-  /* Slide in from left animation */
   opacity: 0;
   transform: translateX(-100%);
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-/* Reveal the clipped wedge on load */
 .hero-image.slide-in {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Text container slides in from right */
+/* Hero text */
 .hero-text {
   margin-left: 2rem;
   opacity: 0;
@@ -60,7 +43,6 @@
   transform: translateX(0);
 }
 
-/* Basic text styling */
 .hero-text h1 {
   font-size: 3rem;
   margin: 0;
@@ -71,4 +53,54 @@
   font-size: 1.5rem;
   margin: 0.5rem 0 0;
   color: #fff;
+}
+
+/* Responsive Design: Adjustments for smaller devices */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: center; /* Center content vertically */
+    padding: 1.5rem 0; /* Reduce vertical padding for smaller screens */
+  }
+
+  .hero-image {
+    width: 80%; /* Scale image for smaller screens */
+    max-width: none; /* Remove maximum width restriction */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0.5rem; /* Reduce spacing between image and text */
+  }
+
+  .hero-text {
+    margin-left: 0; /* Center-align text on smaller screens */
+    text-align: center; /* Center-align the text */
+    margin-bottom: 0.5rem; /* Reduce spacing below text */
+  }
+
+  .hero + section {
+    margin-top: -1rem; /* Reduce gap between Hero and next section */
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Reduce font size for better readability */
+  }
+
+  .hero-text p {
+    font-size: 1.2rem; /* Adjust paragraph font size */
+    margin-bottom: 0.5rem; /* Add consistent spacing after the paragraph */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    width: 100%; /* Ensure the image spans most of the screen width */
+    clip-path: path("M 0 50% L 100% 50% A 50% 50% 0 0 1 0 100% Z"); /* Adjust clip for smaller screens */
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem; /* Slightly smaller for very small screens */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
 }

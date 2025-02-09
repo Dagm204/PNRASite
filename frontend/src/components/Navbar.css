@@ -1,6 +1,7 @@
 /* src/components/Navbar.css */
+
 .navbar {
-  background-color: rgba(71, 111, 144, 0.85); /* Dark blue with transparency */
+  background-color: rgba(71, 111, 144, 0.85);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -10,15 +11,21 @@
   top: 0;
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra right padding for desktop screens */
+@media (min-width: 769px) {
+  .navbar {
+    padding-right: 3rem;
+  }
 }
 
 .navbar-title {
   font-size: 1.5rem;
   font-weight: bold;
-  font-size: 1.5rem;
-  font-weight: bold;
-  cursor: pointer; /* Add pointer on hover */
-  
+  cursor: pointer;
 }
 
 .navbar-links {
@@ -27,27 +34,28 @@
   gap: 1.5rem;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
-/* Apply consistent styling to all links and clickable items */
 .navbar-links li {
   font-size: 1rem;
-  font-weight: bold; /* Make font bold */
-  color: #fff; /* Ensure white color */
-  cursor: pointer; /* Pointer on hover */
-  transition: color 0.3s ease; /* Smooth color transition */
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Prevent breaking multi-word buttons */
 }
 
 .navbar-links li:hover {
   text-decoration: underline;
-  color: #b0d4f1; /* Light blue on hover */
+  color: #b0d4f1;
 }
 
-/* Style for actual anchor links */
 .navbar-links a {
-  color: inherit; /* Inherit color from parent */
+  color: inherit;
   text-decoration: none;
-  font-weight: inherit; /* Inherit font-weight from parent */
+  font-weight: inherit;
+  white-space: nowrap;
 }
 
 /* Language Toggle Styling */
@@ -59,6 +67,7 @@
   border-radius: 15px;
   cursor: pointer;
   margin-left: 1rem;
+  margin-right: 1rem; /* Prevent scrollbar overlap */
   display: flex;
   align-items: center;
   padding: 3px;
@@ -87,3 +96,36 @@
   transform: translateX(30px);
 }
 
+/* Responsive Design: Ensure text stays on one line */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .navbar-title {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .navbar-links {
+    flex: 1 0 100%;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .navbar-links li {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  /* Move language toggle to right side */
+  .language-toggle {
+    margin-left: auto;  /* Push it to the right */
+    margin-right: 0;    /* Ensure it's fully aligned */
+    align-self: flex-end; /* Position it at the bottom-right */
+    margin-top: 1rem;
+  }
+}

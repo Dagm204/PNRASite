@@ -2,6 +2,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import LanguageContext from "../LanguageContext.js";
 import useInView from "../useInView.js";
+import ttsInstance from "../utils/tts.js"; // Import TTS instance
 import "./About.css";
 
 function About() {
@@ -15,6 +16,11 @@ function About() {
     }
   }, [inView, hasAnimated]);
 
+  useEffect(() => {
+    // Update TTS language when switching between English and Amharic
+    ttsInstance.toggleLanguage(isEnglish ? "en" : "am");
+  }, [isEnglish]);
+
   return (
     <section
       id="about"
@@ -25,7 +31,7 @@ function About() {
       <p>
         {isEnglish
           ? "Professional Nursing Recruiting Agency (PNRA) is a U.S-based nonprofit organization dedicated to bridging healthcare gaps by recruiting and supporting qualified international nurses for placement in American healthcare facilities."
-          : "የሙያ ነርስ አድራጎት ድርጅት (PNRA) በአሜሪካ ውስጥ ከተሟላ የአለም አቀፍ ነርስ ለማቅረብ እና ለድጋፍ የተቋቋመ ድርጅት ነው።"}
+          : "ፕሮፌሽናል ነርሲንግ ሪክሩቲንግ ኤጀንሲ (PNRA) በአሜሪካ ውስጥ ከተሟላ የአለም አቀፍ ነርስ ለማቅረብ እና ለድጋፍ የተቋቋመ ድርጅት ነው።"}
       </p>
     </section>
   );

@@ -25,7 +25,7 @@ function Mission() {
       <p>
         {isEnglish
           ? "To meet critical healthcare needs across the U.S. by serving as a trusted liaison connecting international RNs with healthcare providers."
-          : "በአሜሪካ አገር ውስጥ ከሚገኙ ጤና ተቋማት ጋር የተገባ ግንኙነት በመስጠት ሁሉንም ጥቅም የሚያመጣ እና በተሟላ ተሟላ ነርስ እንዲሆኑ የሚያስችል ተልዕኮ ነው።"}
+          : "በአሜሪካን አገር ውስጥ ከሚገኙ ጤና ተቋማት ጋር የተገባ ግንኙነት በመስጠት የሁሉንም ጥቅም የሚያመጣ እና የተሟላ  የነርስ አገልግሎት እንዲሆን የሚያስችል ተልዕኮ ነው።"}
       </p>
     </section>
   );

@@ -1,0 +1,57 @@
+/* src/utils/tts.css */
+/* tts.css - Styles for the TTS floating controls */
+
+/* Speaker button styling */
+.tts-speaker-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(71, 111, 144, 0.85); /* Matches navbar color */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Control panel container styling (single container for all buttons) */
+  .tts-control-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(71, 111, 144, 0.85); /* Matches navbar color */
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease;
+    overflow: hidden;
+    width: 50px; /* Collapsed width (only speaker button visible) */
+  }
+  
+  /* When expanded, the container width becomes 180px (set inline by JS) */
+  
+  /* Control button styling */
+  .tts-control-button {
+    background: white;
+    color: #476f90;
+    font-size: 1.2rem;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Speed dropdown styling */
+  .tts-speed-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

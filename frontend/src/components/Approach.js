@@ -28,50 +28,50 @@ function Approach() {
   const approachItems = [
     {
       number: "1.",
-      title: isEnglish ? "Strategic Partnership" : "የስራ ስርአተ እኩልነት",
+      title: isEnglish ? "Strategic Partnership" : "ስልታዊ አጋርነት",
       description: isEnglish
         ? "Collaborate with healthcare institutions worldwide."
-        : "ከዓለም ላይ ያሉ ጤና ተቋማት ጋር ተባባሪ ይሁኑ።",
+        : "በዓለም ዙሪያ ካሉ የጤና እንክብካቤ ተቋማት ጋር ይተባበሩ።",
       image: oa1,
     },
     {
       number: "2.",
-      title: isEnglish ? "Step-by-Step Support" : "የደረጃ ደረጃ ድጋፍ",
+      title: isEnglish ? "Step-by-Step Support" : "የደረጃ በደረጃ ድጋፍ",
       description: isEnglish
         ? "Guide candidates through U.S. licensure."
-        : "ለአሜሪካ ፈቃድ ደረጃ ተሟላ ድጋፍ።",
+        : "በአሜሪካ ፍቃድ እጩዎችን መምራት።",
       image: oa2,
     },
     {
       number: "3.",
-      title: isEnglish ? "Trusted Support" : "የታማኝ ድጋፍ",
+      title: isEnglish ? "Trusted Support" : "የታመነ ድጋፍ",
       description: isEnglish
         ? "Provide a clear path in processes."
-        : "በሂደቶች ውስጥ ግልጽ መንገድ ይሰጡ።",
+        : "በሂደቶች ውስጥ ግልጽ የሆነ መንገድ ማቅረብ።",
       image: oa3,
     },
     {
       number: "4.",
-      title: isEnglish ? "Targeted Marketing" : "የተመረጡ ማርኬቲንግ",
+      title: isEnglish ? "Targeted Marketing" : "የታለመ ግብይት",
       description: isEnglish
         ? "Connect with potential candidates via digital channels."
-        : "በዲጂታል ማርኬቲንግ ግንኙነት ይገኙ።",
+        : "ሊሆኑ ከሚችሉ እጩዎች ጋር በዲጂታል ቻናሎች ይገናኙ።",
       image: oa4,
     },
     {
       number: "5.",
-      title: isEnglish ? "Expert Guidance" : "የሙያ ምክር",
+      title: isEnglish ? "Expert Guidance" : "የባለሙያዎች መመሪያ",
       description: isEnglish
         ? "Assistance from document review to placement."
-        : "ከሰነዶች ጀምሮ መቀመጫ ድጋፍ።",
+        : "ከሰነድ ግምገማ እስከ ምደባ ድረስ እገዛ።",
       image: oa5,
     },
     {
       number: "6.",
-      title: isEnglish ? "Smooth Transition" : "ቀላል ለውጥ",
+      title: isEnglish ? "Smooth Transition" : "ቀላል ሽግግር",
       description: isEnglish
         ? "Help cultural integration and training."
-        : "ለባህላዊ መገናኘት እና ስልጠና ድጋፍ።",
+        : "የባህል ውህደት እና ስልጠናን መርዳት።",
       image: oa6,
     },
   ];
